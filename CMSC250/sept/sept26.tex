@@ -1,0 +1,74 @@
+\section{Tuesday, September 26, 2023}
+\subsection{Exhaustive Proofs}
+Let's do some exhaustive proofs.
+
+\begin{example}
+    \textbf{Theorem: For all positive integers n with $n\leq 4, (n+1)^3 \geq 3^n$}.
+\end{example}
+
+For this proof of exhaustion, we will look through the entire domain to find if this is true or not.
+
+\begin{proof}
+    Lets make the domain of $n = {1,2,3,4}$. When $n=1, (n+1)^3=2^3=8$, $3=3$. $8>3$. When $n=2, (2+1)^3=3^3=27, 3^2=9, 27>9$. Keep doing this for each value, so then since $(n+1)^3 \geq 3^n, \forall n \leq 4, \therefore (n+1)^3 \geq 3^n$. QED.
+\end{proof}
+
+\begin{example}
+\textbf{Theorem: There are no integer solutions to the equation $x^2+3y^2=8$}.
+\end{example}
+
+\begin{proof}
+Since $\mathbb{Z}$ is an infinite domain, we shall restrict the values for x and y. So, lets set the domain for x to be $x: {-2,2}$ since we need $x^2 \geq 8$. Also, $3y^2>8$ since we need $|y| \geq 2$. $\therefore$ possible values for y include $-1, 0, 1$. Thus, $x^2$ can only be $x^2={0,1,4}$ since the domain is only -2 to 2. And, $3y^2$ can be $3y^2= {0,3}$. Taking the largest values of $x^2$ and $3y^2$, $x^2+3y^2=4+3=7<8$. There is no combination of $\x^2$ and $3y^2$ that is equal to 8. $\therefore$ No integer solution is possible for $x^2+3y^2=8$. QED.
+\end{proof}
+
+\subsection{Proof by Cases}
+Let's do some proof by cases.
+
+\begin{example}
+    \textbf{Theorem: For every integer n, $n^2 \geq n$}.
+\end{example}
+
+\begin{proof}
+    Proof By Cases\\
+    \textbf{Case 1:} Suppose $n=0, n^2=0, n^2=0=n=0$. \\
+    \textbf{Case 2:} Suppose $n>0$, then $n \geq 1$. Multiplying both sides by n, $n^2 \geq n$.\\
+    \textbf{Case 3:} Suppose $n<0$, then $n \leq -1$. This implies that $n \in (-1, -\infty)$. Squaring both sides, $n^2 \in (1, \infty)$, which then implies that $n^2 \geq 1$, $\therefore n^2 \geq n$. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: If n is odd, then $n^2=8m+1$ for some integer m}.
+\end{example}
+
+\begin{proof}
+    Proof By Cases\\
+    Lets say that n is an odd number. Then, $n=2k+1$ such that $k \in \mathbb{Z}$ by the definition of odd numbers.
+    \textbf{Case 1:} Let us say that k is an even number. Therefore, $k=2p$ where $p \in \mathbb{Z}$ which then implies that $n=2(2p)+1=4p+1$. Squaring both sides gives up $n^2=(4p+1)^2=16p^2+8p+1=8(2p^2+p)+1$ getting that $m=2p^2+p$ such that it is in $\in \mathbb{Z}$, because integers are closed under addition and multiplication, so then $n^2=8m+1$.\\
+    \textbf{Case 2:} Say that k is odd. Therefore, $n=2k+1=2(2p+1)+1=4p+3$. Now we have $n=4p+3$ by definition of odd numbers, squaring both sides gives $n^2=(4p+3)^2=16p^2+24p+9=16p^2+24p+8+1$ which then is now $8(2p^2+3p+1)+1$ so that $2p^2+3p+1=m$ such that $m \in \mathbb{Z}$ because integers are closed in addition and multiplication, thus, $n^2=8m+1$. $\therefore$ is n is odd, $n^2=8m+1$. QED.
+    
+\end{proof}
+
+\subsection{Constructive Proofs of Existence}
+Let's do constructive proofs of existence.
+
+\begin{example}
+    $(\exists a,b \in \mathbb{N}) : [a^b = b^a \land a \neq b]$
+\end{example}
+
+\begin{proof}
+Suppose $a=2$ and $b=4$. Then, taking the power $a^b=2^4=16$, as well then $b^a=4^2=16$. $\therefore a^b=b^a$. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: 23 can be written as the sum of 9 cubes (of non-negative integers)}
+\end{example}
+
+\begin{proof}
+    $23= 2^3+ 2^3 + 1+3 + 1^3 + 1^3 + 1^3 + 1^3 + 1^3 + 1^3 = 8 + 8 + 1 + 1+1+1+1+1+1=23$. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: There is a positive integer that can be written as the sum of cubes of positive integers in two different ways.}
+\end{example}
+
+\begin{proof}
+    Suppose the positive integer that we have is $1729$. $\therefore 1729=10^3+9^3$. QED.
+\end{proof}

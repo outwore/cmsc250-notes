@@ -1,0 +1,72 @@
+\section{Tuesday, October 17, 2023}
+
+\subsection{Proof by Induction}
+
+To give ourselves a general basis on induction, we can give ourselves an example to alleviate the trouble of figuring it out for the first time.
+
+Let $P(n)$ be the sentence "n cents postage can be obtained using 3 cent and 5 cent stamps."
+
+\textbf{Main Idea}: We want to show that "$P(k)$ is true" implies that $P(k+1)$ is true, for all $k \geq 8$. An ideal solution here would be to setup 2 different cases:
+
+\begin{itemize}
+	\item Our first case is going to be showing that $P(k)$ is true, AND the k cents contain at least one 5 cent stamp.
+	\item Our second case is going to be showing that $P(K)$ is true, AND the k cents do not containe ANY 5 cent stamps.
+\end{itemize}
+
+A basic idea regarding induction involves us thinking about how a chain of dominos falls. 
+
+\begin{itemize}
+	\item We know that the first domino will fall, since we are the ones knocking it over.
+	\item Thus, we have to show that we can prove that every subsequent domino will fall over due to us knocking over the first domino.
+\end{itemize}
+
+From here, we can now set our basis on the definition of induction (in simple terms).
+
+\subsubsection{Simple Induction}
+\textbf{\underline{Definition 15.1}}: Let's claim that $\forall n \in \mathbb{N} : [P(n)]$.
+
+\begin{proof}
+	Proof by Induction\\
+	By inducting on n, we may now form cases.\\
+	\textbf{Base Case}: Show $P(0)$ directly.\\
+	\textbf{Inductive Hypothesis}: Assume that $P(k)$ is true, for some $k \in \mathbb{N}$.\\
+	\textbf{Inductive Step}: Prove that $P(k+1)$ must also be true based on the initial assumption that $P(k)$ is true.
+\end{proof}
+
+Let's take a look back at our example on dominos, and prove it through induction.
+
+\begin{example}
+	\textbf{Theorem}: $(\forall n \in \mathbb{N}^{>0})[$Domino $n$ will fall]
+\end{example}
+
+\begin{proof}
+	Proof by Induction\\
+	\textbf{Base Case}: The first domino [$P(0)$] will fall, because I knocked it over.\\
+	\textbf{Inductive Hypothesis}: Assume domino $k$ will fall over, for some $k \in \mathbb{N}^{>0}$.\\
+	\textbf{Inductive Step}: Since domino $k$ is falling, then domino $k+1$ will be struck by domino $k$, thus knocking it over (due to physics).
+\end{proof}
+
+Recall how we showed the Modular Arithmetic Theorem:\\
+
+Let $a,b,c,d,n \in \mathbb{Z}$, where $n > 1$. Suppose $a \equiv_n c$ and $b \equiv_n d$. Then:
+
+\begin{itemize}
+	\item $a+c \equiv_n b+d$
+	\item $ac \equiv_n bd$
+	\item $a-c \equiv_n b-d$
+	\item $a^m \equiv_n c^m$ for all $m \in \mathbb{N}$
+\end{itemize}
+
+\begin{example}
+	\textbf{Theorem}: $(\forall n \in \mathbb{N}^{\geq 1})[n^3 \equiv_3 n]$
+\end{example}
+
+\begin{proof}
+	Proof by Induction\\
+	\textbf{Base Case}: Suppose $n=1$. Therefore, $n^3 \equiv_3 n$ turns into $1^3 \equiv_3 1$, which is true.
+	\textbf{Inductive Hypothesis}: Assume k such that $k^3 \equiv_3 k$ is true, for some $k \in \mathbb{N}^{\geq 1}$.
+	\textbf{Inductive Step}:
+\end{proof}
+
+
+

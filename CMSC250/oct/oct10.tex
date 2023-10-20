@@ -1,0 +1,168 @@
+\section{Tuesday, October 10, 2023}
+
+\subsection{Modular Arithmetic}
+
+\textbf{\underline{Definition 13.1}}: We say that if we are given some value a, then $a \mod n$ represents the remainder when the integer a is divided by some n. (If a number is congruent to another number, they have the same remainder).
+
+\begin{itemize}
+    \item a is congruent to b modulo n if n divides $a - b$.
+    \item a congruent b is represented as $a \equiv b \mod n$, or $a \equiv_n b$.
+    \item $a \equiv \mod n$ if $n|a-b$.
+    \item $a \mod n = b \mod n$ : This implies that they are congruent!
+    \item $a-b=nk, k \in \mathbb{Z}$, therefore $a = b + nk$.
+\end{itemize}
+
+\begin{example}
+    Is 17 congruent to 5 modulo 6?
+\end{example}
+
+This shows: $17 \equiv_6 5$, which in turn goes to $17 \equiv 5 (\mod 6)$, therefore $6 | 17-5 = 6|12$. So then we check, $17 \mod 5 = 5 \mod 6$? They both have the same remainder, 5, therefore they are congruent.
+
+\begin{example}
+    Is 24 congruent to 14 modulo 6?
+\end{example}
+
+We check if $24 \equiv_6 14.$ We then see that $6\nmid(24-14)$, which then shows that $6\nmid10$.
+
+\subsection{The Congruence Theorem}
+
+\begin{theorem}
+    The integers a and b are congruent modulo n if and only if there is an integer k such that $a = b + kn$.\\
+    \textbf{Extension of Theorem}:
+    \begin{center}
+        If $a \equiv b \mod n$ and $c \equiv d \mod n$, then\\
+        $a+c\equiv b+d ($mod $n)$ and $ac=bd ($mod $n)$\\
+        $a-c\equiv b-d ($mod $n)$ and $a^m=b^m ($mod $n)$
+    \end{center}
+\end{theorem}
+
+\begin{example}
+    $7 \equiv 2 ($mod $5)$ and $11 \equiv 1 ($mod $5)$
+\end{example}
+
+5 here will be our n (it's inside the modulus argument). $a=7, b=2, c=11, d=1$. Lets try:
+\begin{itemize}
+    \item $a+c \equiv b+d \mod 5$, which in turn then turns into $18 \equiv_5 3$.
+    \item $ac \equiv bd \mod 5$, which in turn then turns into $77 \equiv_5 2 $.
+    \item For the rest, try them out yourself!
+\end{itemize}
+
+\begin{example}
+    \textbf{Theorem: $\forall a,b \in \mathbb{N}$, the following are equivalent:}
+    \begin{itemize}
+        \item $a \equiv_n b$
+        \item $n|(a-b)$
+        \item $(\exists k \in \mathbb{Z})[a=b+kn]$
+    \end{itemize}
+\end{example}
+
+\subsection{Quotient Remainder Theorem}
+\textbf{\underline{Definition 13.2}}: Given any integer n and positive integer d, there exists unique integers q and r such that:
+
+\begin{center}
+    $n = dq + r $ and $0 \leq r < d$
+\end{center}
+
+\begin{example}
+    $n = 54, d = 4$
+\end{example}
+
+$54=4(13)+2, q =13, r=2$
+
+\begin{example}
+    $n = -54, d = 4$
+\end{example}
+
+$-54=4(-14)+2, q=-14, r=2$
+
+\begin{example}
+    $n = 54, d = 70$
+\end{example}
+
+$54=70(0)+54, q=0, r=54$
+
+A representation of the quotient remainder may make it easier for us to truly grasp what this theorem states. For example, if we represent integers using the quotient remainder theorem, we can observe that:
+
+\begin{center}
+\begin{tabular}{||c c ||} 
+ \hline
+ Modulus & Forms  \\ [0.5ex] 
+ \hline\hline
+ 2 & $2q, 2q+1$  \\ 
+ \hline
+ 3 & $3q, 3q+1, 3q+2$ \\
+ \hline
+ 4 & $4q, 4q+1, 4q+2, 4q+3$  \\
+ \hline
+ ... & ...  \\
+ \hline
+ $k$ & $kq, kq+1, kq+2.... kq+(k-1)$  \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+Let's apply the quotient remainder theorem in some proofs.
+
+\newpage
+\begin{example}
+    \textbf{Theorem: $\forall n, 2n^2+3n+2$ is not divisible by 5.}
+\end{example}
+
+\begin{proof}
+    Proof by Cases by using Remainder Theorem\\
+    \textbf{Case 1:} When $5|n$, $n=5k, k \in \mathbb{Z}$ (Remainder 0). Squaring both sides then gives $n^2=25k^2$, multiplying both sides by 2, $2n^2=50k^2$. Multiplying the original equation by 3 on both sides $3n=15k$, and add the new equation with the second one $2n^2+3n=50k^2+15k$. Adding 2 on both sides will then give us $2n^2+3n+2=50k^2+15k+2$, where the second half also equals $5(10k^2+3k)+2$. Thus, since we have remainder, 5 does not divide the original equation when $5|n$.\\
+    \textbf{Case 2:} When $n=5k+1$. Squaring both sides then gives $n^2=25k^2+10k+1$. Multiply both sides by 2, $2n^2=50k^2+20k+2$. Multiply the first equation by the third, when then get $3n=15k+3.$ Adding equation 5 and 6, we then get that $2n^2+3n=50k^2+35k+5$. Adding 2 to both sides then gives that $2n^2+3n+2=50k^2+35k+5+2$, which then also equals $5(10k^2+7k+1)+2$. Since we have remainder, 5 does not divide the original equation when $5|2n^2+3n+2$.\\
+    \textbf{Case 3:} When $n=5k+2$. Squaring both sides then gives that $n^2=25k^2+20k+4$. Multiplying by 2, $2n^2=50k^2+40k+8$. Multiply this by equation 3, $3n=15k+6$. Adding everything together, we then get that $2n^2+3n+2=50k^2+55k+14+2$, which then gets that $5(10k^2+11k+3)+1$. Since we have remainder, 5 does not divide the original equation.\\
+    \textbf{Case 4:} ..... continue on your own time.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: $(\forall n \in \mathbb{Z} [3 \nmid n \rightarrow n^2 \equiv_3 1]$}
+\end{example}
+
+\begin{proof}
+    We have three remainders possible: $0, 1, 2$, but only two cases. $r \in [1,2]$.\\
+    \textbf{Case 1:} Suppose $r=1$, therefore $n=3k+1$. Squaring both sides then gives that $n^2=9k^2+6k+1$, which then turns into $3(3k^2+2k)+1$. This implies that $n^2-1=3(3k^2+2k)$. Therefore this shows that $3|n^2-1$, which implies that $n^2 \equiv_3 1$.\\
+    \textbf{Case 2:} Suppose $r=2$, therefore $n=3k+2$. Squaring both sides then gives that $n^2=9k^2+12k+4$. Which then turns into $9k^2+12k+3+1$, equals $3(3k^2+4k+1)+1$. Therefore $n^2-1=3(3k^2+4k+1)$, which then shows that $3|n^2-1$, implying the congruence $n^2 \equiv_3 1$.
+\end{proof}
+
+\subsection{Floors and Ceilings}
+\subsubsection{Floors}
+\textbf{\underline{Definition 13.3}}: Taking the floor of a number shows the following:
+
+\begin{center}
+    Suppose $\forall x \in \mathbb{R}, n \in \mathbb{Z}$;\\
+    $\floor{x} = n \iff n \leq x < n+1$
+\end{center}
+
+\subsubsection{Ceilings}
+\textbf{\underline{Definition 13.4}}: Taking the ceiling of a number shows the following:
+
+\begin{center}
+    Suppose $\forall x \in \mathbb{R}, n \in \mathbb{Z}$;\\
+    $\ceiling{x} = n \iff n - 1 < x \leq n$
+\end{center}
+
+\subsubsection{Proofs Involving Floors and Ceilings}
+
+\begin{example}
+    \textbf{Theorem: $(\forall x \in \mathbb{R})(\forall y \in \mathbb{Z})[\floor{x+y}=\floor{x}+y]$}
+\end{example}
+
+\begin{proof}
+    Suppose $\floor{x}=n, \therefore n \leq x < n+1$. Adding y to both sides, we then get $n+y \leq x+y < n+y+1$. Through this we can express that this is equal to $\floor{x+y}=n+y$, which is then $\floor{x+y}=\floor{x}+y$.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: The floor of $(n/2)$ is either:}
+    \begin{itemize}
+        \item $n/2$ when n is even, or
+        \item $(n-1)/2$ when n is odd.
+    \end{itemize}
+\end{example}
+
+\begin{proof}
+	Proof by Cases\\
+	\textbf{Case 1}: Suppose that n is even. Therefore, we then have that $n=2k$, such that $k \in \mathbb{Z}.$ Then if we divide both sides by 2, we then get that $n/2=k$. By the definition of the floor, we can then show that $k\leq x < k + 1$, which then turns into $n/2 \leq x < n/2 +1$, satisfying the theorem.\\
+	\textbf{Case 2}: Suppose that n is odd. Therefore, we have that $n=2k+1$ such that $k \in \mathbb{Z}.$ Then if we subtract both sides by 1, we then get $n-1=2k$. Dividing both sides by 2 then gives us that $(n-1)/2=k$. By the definition of the floor, we can then show that $k\leq x < k + 1$, when then turns into $(n-1)/2 \leq x < (n-1)/2+1$, satisfying the theorem. QED.
+\end{proof}

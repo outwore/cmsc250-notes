@@ -1,0 +1,100 @@
+\documentclass[english, 10pt]{article}
+\usepackage[sexy]{evan}
+\usepackage{inconsolata}
+\usepackage[shellescape]{gmp}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{logicproof}
+\usetikzlibrary{arrows.meta}
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editorGreen}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[toc,page]{appendix}
+\usepackage{todonotes}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usetikzlibrary{calc,shapes.multipart,chains,arrows}
+\usepackage{esint}
+\usetikzlibrary{shapes.multipart}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\allowdisplaybreaks%
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\thiscoursecode}{CMSC 250}
+\newcommand{\thiscoursename}{Discrete Mathematics}
+\newcommand{\thisprof}{Prof. Mohammad Nayeem Teli}
+\newcommand{\me}{Axel Balestrieri}
+\author{Axel Balestrieri\thanks{Email: \mailto{axelb2004@icloud.com}}}
+\newcommand{\thisterm}{Fall 2023}
+\newcommand{\website}{https://www.cs.umd.edu/class/fall2023/cmsc250-020X/}%chktex 8
+\usepackage{ifpdf}
+\ifpdf%
+\DeclareGraphicsRule{*}{mps}{*}{}
+\fi
+\lhead{\textbf{\me} \\ \textbf{\thisprof}}
+\rhead{\textbf{\thiscoursename} \\ \textbf{\thisterm}}
+
+\newcommand{\notefront}{%
+\pagenumbering{arabic}
+\begin{center}
+{\small}
+\textbf{\Huge{{\thiscoursecode}}}
+{\Huge \par}
+{\Large{{\thiscoursename}}}\\
+\vspace{0.1in}
+\vspace{0in}\includegraphics[scale=0.3]{media/cs.jpg} \\
+\vspace{0.1in}{\me} \\
+{\thisprof} \ $\bullet$ \ {\thisterm} \ $\bullet$ \ {{University of Maryland}} \\
+{\ttfamily \url{\website}} \\
+\end{center}
+}
+
+\begin{document}
+  \thispagestyle{empty}
+  \notefront
+  \tocandfigures
+
+\include{aug/aug29}
+\include{aug/aug31}
+\include{sept/sept5}
+\include{sept/sept7}
+\include{sept/sept12}
+\include{sept/sept14}
+\include{sept/sept19}
+\include{sept/sept21}
+\include{sept/sept26}
+\include{sept/exam1rev}
+\include{oct/oct3}
+\include{oct/oct5}
+\include{oct/oct10}
+\include{oct/oct12}
+\include{oct/oct17}
+
+\begin{thebibliography}{9}
+\bibitem{discretetextbook} 
+Discrete Mathematics and its applications. Kenneth H. Rosen.
+\end{thebibliography}
+\end{document}

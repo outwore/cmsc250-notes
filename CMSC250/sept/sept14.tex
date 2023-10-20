@@ -1,0 +1,66 @@
+\section{Thursday, September 14, 2023}
+\subsection{More on Predicate Logic: Truth and Falsity}
+For universal and existential quantifiers, it is imperative that we establish how to find if an existential and/or universal statement is true or false.
+
+\begin{itemize}
+    \item To show $\exists$ statement is true, find an example in the domain where it is true.
+    \item To show $\exists$ statement is false, show false for every member of the domain.
+    \item To show $\forall$ statement is true, show true for every member of the domain.
+    \item To show $\forall$ statement is false, find an example in the domain where it is false.
+\end{itemize}
+
+Do note that the domain does matter!
+
+\begin{example}
+\textbf{Is the following true:}\\
+$\forall x \exists y: y<x$
+\end{example}
+
+To determine whether or not this is true, we must establish:
+\begin{itemize}
+    \item Is the domain $\mathbb{N}$? (Naturals)
+    \item Is the domain $\mathbb{Z}$? (Integers)
+    \item Is the domain $\mathbb{Q}$? (Rationals)
+    \item Is the domain $\mathbb{Q}^>^0$? (Rationals that are greater than 0)
+    \item Is the domain $\mathbb{Q}^>^=^0$? (Rationals that are greater than or equal to 0)
+    \item Is the domain $\mathbb{R}$? (Reals)
+    \item Is the domain $\mathbb{C}$? (Complex)
+\end{itemize}
+
+\subsection{Vacuity in Universal Statements}
+\textbf{\underline{Definition 6.1}}: If domain, D, is empty, then $(\exists x \in D)[P(x)]$ is vacuously false. This then means that if domain, D, is empty, then $(\forall x \in D)[P(x)]$ is vacuously true.
+
+\begin{example}
+    All balls in the bowl are blue. \textbf{Is it true or false?}
+\end{example}
+
+This statement is false, if and only if, its negative is true. Its negation is "there exists a ball in the bowl that is not blue." But what if the bowl is empty?
+
+If the bowl is empty, the negation would then be false as there does not exist a ball in the bowl that is not blue, which makes the original statement true by "default" or in other words, vacuously true.
+
+\subsection{Order Matters}
+The order for which domain values variables are placed in a predicate statement do indeed matter.
+
+\begin{example}
+    $Q(x,y,z): x+y=z$, for $x,y,z \in \mathbb{R}$\\
+    \textbf{Are these statements equivalent?}\\
+    $\forall x \forall y \exists z: Q(x,y,z)$\\
+    $\exists z \forall x \forall y: Q(x,y,z)$
+\end{example}
+
+\textbf{Try to do this one yourself :)}
+
+\subsection{Negating Nested Quantifiers}
+Negation of quantifiers works exactly like how one would expect it to work, just like De Morgan's laws.
+
+\begin{example}
+    \textbf{Express the negation of the statement: }$\forall x \exists y: (xy=1)$ 
+\end{example}
+
+As typical, apply De Morgan's laws carefully and then you will get the final answer.
+
+\begin{center}
+    $\exists x \neg \exists y: (xy=1)$\\
+    $\exists x \forall y: \neg (xy=1)$\\
+    $\exists x \forall y: (xy\neq 1)$
+\end{center}

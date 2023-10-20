@@ -1,0 +1,117 @@
+\section{Thursday, October 5, 2023}
+Today's lecture will expand further upon our ideas of proofs, specifically we'll be going over proofs involving universal generalization and divisibility of numbers.
+
+\subsection{Proofs Involving Universal Generalization}
+When we are trying to prove some statement, typically all the proofs we do involve theorems that are universal, and if we were to write it in our logical symbolic form, would be:
+
+\begin{displaymath}
+\forall x \in D : P(x) \rightarrow Q(x)
+\end{displaymath}
+
+\begin{example}
+\textbf{Theorem: $\forall n \in \mathbb{Z}$, if n is even and $4 \leq n \leq 26$, then n can be written as a sum of two prime numbers.}
+\end{example}
+
+Notice that here we restrict our domain of n to be all even integers from 4 to 26.
+
+\begin{proof}
+Proof by Exhaustion\\
+n is even in this range, so let's try using 4 first, therefore $4=2+2$, now 6, $6=3+3$, now 8, $8=3+5$, now 10, $10=3+7$, now 12, $12 = 5+7$, 14, $14=3+11$, 16, $16=5+11$,.... continuing until 26. By our calculations, QED.
+\end{proof}
+
+\begin{example}
+\textbf{Theorem: $\forall n \in \mathbb{Z}$, if n is even, then n can be written as a sum of two prime numbers.}
+\end{example}
+
+Proof by exhaustion here isn't possible, since we have \textbf{no} restriction ob our domain of n, so if we were to use proof by exhaustion, it would take an infinite amount of time!
+
+\subsubsection{Using Universal Generalization as a Method of Proof}
+This method of proof is the most common technique for proving statements that are universally quantified. If you're not sure how to start the proof, try this way:
+
+\textbf{\underline{Definition 12.1}}: Suppose we have a theorem given by $\forall x \in D : P(x)$. Proof: Let $a \in D$, arbitrarily chosen..... $\therefore P(a)$. Since a was chosen arbitrarily, $P(x)$ holds for all $x \in D$.
+
+\begin{example}
+    \textbf{Theorem: ($\forall n \in \mathbb{N}^{Even}) : [n^2$ is even]}
+\end{example}
+
+\begin{proof}
+    Suppose $a$ is some arbitrary number, such that $a \in \mathbb{N}^{even}$. Therefore, $a = 2k$ such that $k \in \mathbb{Z}$. Squaring both sides, then we have that $a^2=4k^2=2(2k^2)$. Suppose $c = 2k^2$, where $c \in \mathbb{Z}$ since integers are closed under multiplication. Therefore $a^2=2c$, which shows that $a^2$ is truly an even number by definition. Therefore now we can generalize ($\forall n \in \mathbb{N}^{Even})$, $n^2$ is truly even. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: ($\forall n \in \mathbb{N}^{>0}) : [n^2+3n+2$ is composite]}
+\end{example}
+
+\begin{proof}
+    Suppose $a$ is some arbitrary number, such that $a \in \mathbb{N}^{>0}$, such that $a^2+3a+2$. This then equals that $a^2+2a+a+2=a(a+2)+1(a+2)$. Therefore we can show this also as $(a+1)(a+2)$. We do know that $a+1>1$, and also that $a+2>1$. So since these are multiples that are greater than one, this also means that $a^2+3a+2$ is not a prime number, therefore making it a composite number. This then means that through generalization, $\forall n \in \mathbb{N}^{>0})$, $n^2+3n+2$ is composite. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: ($\forall n \in \mathbb{Z}^{Even}) : [(-1)^n=1]$}
+\end{example}
+
+\begin{proof}
+    Suppose $a$ is some arbitrary number, such that $a \in \mathbb{Z}^{Even}$. Therefore, $a=2k$, such that $k \in \mathbb{Z}$ by definition of even numbers. Thus, $(-1)^a=(-1)^{2k}=[(-1)^2]^k=1^k=1$. Since we have shown for an arbitrary value $(-1)^a=1$, therefore by generalization, we now know that $[(-1)^n=1]$. QED.
+\end{proof}
+
+Note that if we want to disprove a statement, we prove its negation. Therefore disproving some universally generalized statement we do:
+
+\begin{center} 
+\begin{displaymath}
+    \neg[\forall x, P(x)]
+\end{displaymath}
+Which is equivalent to:
+\begin{displaymath}
+    \exists x, \neg P(x)
+\end{displaymath}
+\end{center}
+
+\subsection{Divisibility}
+\textbf{\underline{Definition 12.2}}: If n and d are integers and $d \neq 0$, then n is divisible by d, if and only if, n equals d times some integer.
+
+\begin{itemize}
+    \item To express "d divides n", the notation we use is $d|n$.
+    \item In proofs, we frequently use the following interchangeably: $d|n$ is the same as $(\exists a \in \mathbb{Z}) : [n = ad]$
+\end{itemize}
+
+\begin{example}
+    \textbf{Theorem: $\forall x, y, z \in \mathbb{N} : $ if $x|y$ and $y|z$, then $x|z$}.
+\end{example}
+
+\begin{proof}
+    Suppose we have an arbitrary number $a$. Therefore, we have that $x|y=$ implies $y=xa$. Similarly, using another arbitrary value $b$ such that $y|z$ implies $z=yb$. By substituting $y=xa$ in our second equation, we then have that $z=(xa)b$, we then have $ab=c$ where $c \in \mathbb{Z}$ since integers are closed under multiplication. Therefore $z=xc$ implies that $x|z$. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: Any integer $n>1$ is divisible by a prime number.}
+\end{example}
+
+\begin{proof}
+    Suppose we have an arbitrary value $a$ such that $a \in \mathbb{Z}^{>1}$. Then, $a=p_0q_0$. If a is prime, then we're done. $p_0|a$, $q_0|a$. Let us assume that $p_0$ is composite. Therefore, $p_o=p_1q_1$. If $p_1$ or $q_1$ is prime, then we are done, since $a=p_0q_0=p_1q_1q_0$. If $p_1$ is composite, $p1=p_2q_2$. If $p_2$ or $q_2$ is prime, we are done, because $a=p_1q_1q_0=p_2q_2q_1q_0$. The proof will end when we find a prime number, which will happen due to the Fundamental Theorem of Arithmetic. QED.
+\end{proof}
+
+\subsection{Fundamental Theorem of Arithmetic}
+\textbf{\underline{Definition 12.3}}: Given any integer $n>1$, there exists a positive integer $k$, distinct prime numbers $p_1, p_2, ...., p_k$ and positive integers $e_1, e_2, ...., e_k$ such that
+
+\begin{displaymath}
+n=p_1^{e_1}p_2^{e_2}p_3^{e_3}....p_k^{e_k}
+\end{displaymath}
+
+and $p_1 < p_2 < .... < p_k$.
+
+\begin{example}
+    \textbf{Theorem: $(\forall a \in \mathbb{N}^+)(\forall q \in \mathbb{N}^{prime}) : [q|a^2 \rightarrow q|a]$}
+\end{example}
+
+\begin{proof}
+    Through the Fundamental Theorem of Arithmetic, any arbitrary positive number can be expressed as a product of prime numbers. Therefore, we can have that $a=p_0p_1p_2.....p_n$. Squaring both sides then gives that $a^2=(p_0p_1p_2....p_n)(p_0p_1p_2....p_n)$. We are given that $q|a^2$. That means one of the prime numbers in the equation $a=p_0p_1p_2....p_n$ is q. However, the values $p_0.....p_n$ are also factors of a. Therefore $q|a$. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: $\sqrt{3} \notin \mathbb{Q}$}.
+\end{example}
+
+\begin{proof}
+    Proof by Divisibility and Contradiction\\
+    Assume that $\sqrt{3}$ is a rational number. Therefore by definition, $\sqrt{3}=p/q$ where $q \neq 0$, where $p$ and $q$ are co-primes. By squaring both sides, we then get that $3=(p/q)^2$. We can then get that $p^2=3q^2$, which then also means that $3|p^2$ and $q^2|p^2$ by divisibility theorem. If $3|p^2$, then $3|p$. If $q^2|p^2$, then $q^2|p$, from the previous proof. $\therefore 3|p$, which then implies that $p=3s$, where s is some arbitrary value. Squaring both sides then gives us that $p^2=9s^2$. We know from the second equation, that $p^2=3q^2=9s^2$. Therefore $q^2=3s^2$. This implies that $3|q^2$ as well as $s^2|q^2$. If $3|q^2$ then $3|q$, 3 divides both p and q. Therefore, p and q are not co-prime, which violates our assumption, therefore $\sqrt{3}$ is truly irrational. QED. 
+\end{proof}

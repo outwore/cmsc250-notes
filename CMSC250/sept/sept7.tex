@@ -1,0 +1,44 @@
+\section{Thursday, September 7, 2023}
+
+\subsection{Number Bases}
+All numbers contain the same concept between each other, called their \vocab{number base}. The number base, in short, is the number of digits that a system of counting uses to represent numbers. For example, if we have a number in base 10, 639, the 9 is in ones place, 3 is in the tens place, and 6 is in the hundreds place.
+
+In this course, we will be focusing on decimal and binary numbers.
+
+\subsubsection{Decimal (Base 10)}
+\textbf{\underline{Definition 4.1:}} A decimal number has the expression:
+
+\begin{displaymath}
+    n : ...d_3d_2d_1d_0
+\end{displaymath}
+
+Therefore..
+
+\begin{displaymath}
+    n_1_0 = ... + d_3 * 10^3 + d_2 * 10^2 + d_1 * 10^1 + d_0 * 10^0
+\end{displaymath}
+
+\subsubsection{Binary (Base 2)}
+\textbf{\underline{Definition 4.2:}} A binary number has the expression:
+
+\begin{displaymath}
+    n : ...d_3d_2d_1d_0
+\end{displaymath}
+
+Therefore..
+
+\begin{displaymath}
+    n_1_0 = ... + d_3 * 2^3 + d_2 * 2^2 + d_1 * 2^1 + d_0 * 2^0
+\end{displaymath}
+
+\subsection{Converting from Binary to Decimal, and Decimal to Binary}
+Converting from binary to decimal is straightforward, as all you need to do is use the formula given above and you will get your base 10 number. However, for decimal to binary, you must:
+
+\begin{logicproof}{1}
+     & Divide the given decimal number by 2 constantly (Divide each quotient until 0). \\
+     & Gather all remainders from the division (either 1 or 0). \\
+     & Starting from the last remainder to the first remainder, build your new binary  number.
+\end{logicproof}
+
+\subsection{Digital Circuits}
+\textit{Look online through Justin's notes on digital circuits, as drawings must be made.}

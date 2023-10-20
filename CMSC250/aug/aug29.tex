@@ -1,0 +1,136 @@
+\section{Tuesday, August 29, 2023}
+Welcome to CMSC250, also known as Discrete Structures through UMD. In this class, we will go over logic and its statements, and eventually lead up to being able to write formal, elegant proofs.
+
+\subsection{DISCLAIMER}
+The notes written in this document do NOT fully cover the entirety of CMSC250, as some examples may have been omitted for simplicity. All examples and worksheets can be found online for extra practice (do use them, this information is very general!) For extra notes and examples, visit:\\
+https://www.math.umd.edu/(tilde)immortal/CMSC250/.
+
+\subsection{Statements and Logic}
+In discrete mathematics, we like to introduce ourselves to the idea of how we may use \vocab{statements} to form logical expressions. In our class, a statement is \textbf{a proposition which can either hold a conclusion of it being true or false, but NEVER both.}
+
+Lets look at a few examples, and try to distinct if they are statements or not.
+
+\begin{example}
+    Statement or not?
+    3 + 3 = 6
+\end{example}
+
+This is quite intuitive, but this is of course, a statement, as we know commonly that 3 plus 3 really does equal 6, therefore giving making it true.
+
+How about this one?
+
+\begin{example}
+    Statement or not?
+    \(x > 20\).
+\end{example}
+
+Now, you may say, this can be a statement because we can just make \(x\) a value either greater than or less than 20, and it will either be true or false! Well... no. Since the value can differ between either true or false, and we do not EXPLICITLY know what \(x\) is, this is not a statement.
+
+\subsection{Logical Negation, Disjunction, Conjunction, XOR, and Precedence}
+In common logic, we use different variables to represent statements called \vocab{statement variables}. Typically, these statement variables will be denoted by using letters starting from \(p\), then going to \(q\), and et cetera.
+
+\subsubsection{Negation (Not)}
+\textbf{\underline{Definition 1.1}}: Suppose we are given some statement or statement variable \(p\). Given this, we can interpret the negation of \(p\) to be "not \(p\)", or the opposite of \(p\). Writing this out for logic problems, we use the symbol \neg{p}.
+
+\subsubsection{Disjunction (Or)}
+\textbf{\underline{Definition 1.2}}:  Given two propositions, \(p\) and \(q\), such that \(p\) is not equal to \(q\), we now know \(p\)\lor\(q\) is true if all or either value is true.
+
+\subsubsection{Conjunction (And)}
+\textbf{\underline{Definition 1.3}}: Given two propositions, \(p\) and \(q\), such that \(p\) is equal to \(q\), we now know $p\land q$ is true if and only if both values are true.
+
+\subsubsection{XOR $(\oplus)$}
+\textbf{\underline{Definition 1.4}}: XOR (exclusive or) can be considered one or the other, but not the same as or in logic. Also known as being true if either \(p\) is true or \(q\) is true, but never both.
+
+\subsubsection{Precedence}
+\begin{itemize}
+    \item Conjunction and disjunction have equal precedence.
+    \item Negation has first precedence.
+    \item Considering the statement, XOR may have equal precedence to disjunction, or it may not.
+\end{itemize}
+
+\subsubsection{Interpretations and Translating Statements}
+In logic examples, it is common to have to translate English sentences into logical statements (you will see this on quizzes and exams!). Let's look at a few examples.
+
+\begin{example}
+    I am hungry or I am tired.
+\end{example}
+
+In this example, let \(p\) be "I am hungry," and \(q\) be "I am tired." From this, we can get the answer: $p\lor q.$\\
+
+\begin{example}
+    Either I am hilarious or you have no sense of humor.
+\end{example}
+
+In this example, let \(p\) be "I am hilarious," and \(q\) be "You have a sense of humor." From this, we can get the answer: $p \oplus \neg{q}$\\
+
+
+\subsection{Truth Tables}
+In logic, we like to portray truth values (either when \(p\) is true or false) in a table called the \vocab{truth table}. This allows us to easily interpret different outcomes if we give our statement variables alternating values.
+\begin{example}
+Fill in the truth table for the values with question marks.
+\begin{displaymath}
+\begin{array}{|c c|c|c|}
+% |c c|c| means that there are three columns in the table and
+% a vertical bar ’|’ will be printed on the left and right borders,
+% and between the second and the third columns.
+% The letter ’c’ means the value will be centered within the column,
+% letter ’l’, left-aligned, and ’r’, right-aligned.
+p & q & p \land q & p \lor q\\ % Use & to separate the columns
+\hline % Put a horizontal line between the table header and the rest.
+T & T & ? & ?\\
+T & F & ? & ?\\
+F & T & ? & ?\\
+F & F & ? & ?\\
+\end{array}
+\end{displaymath}
+\end{example}
+
+
+Using our definitions of disjunction and conjunction, we can fill out the truth table to look like this now:
+
+\begin{displaymath}
+\begin{array}{|c c|c|c|}
+% |c c|c| means that there are three columns in the table and
+% a vertical bar ’|’ will be printed on the left and right borders,
+% and between the second and the third columns.
+% The letter ’c’ means the value will be centered within the column,
+% letter ’l’, left-aligned, and ’r’, right-aligned.
+p & q & p \land q & p \lor q\\ % Use & to separate the columns
+\hline % Put a horizontal line between the table header and the rest.
+T & T & T & T\\
+T & F & F & T\\
+F & T & F & T\\
+F & F & F & F\\
+\end{array}
+\end{displaymath}
+
+Lets look at another example (this one is quite useful!)
+
+\begin{example}
+    Finish the truth table below, indicating every step to reach the final value.
+    \begin{displaymath}
+    \begin{array}{|c c|c|}
+    p & q & (p \lor q)\land \neg{(p \land q)}\\ 
+    \hline
+    F & F & ?\\
+    F & T & ?\\
+    T & F & ?\\
+    T & T & ?\\
+    \end{array}
+    \end{displaymath}
+\end{example}
+
+Combining our definitions of negations, disjunctions, and conjunctions, we can reach a final truth table that looks something like this:
+
+\begin{displaymath}
+    \begin{array}{|c c|c|c|c|}
+    p & q & p \lor q & p \land q &(p \lor q)\land \neg{(p \land q)}\\ 
+    \hline
+    F & F & F & F & F\\
+    F & T & T & F & T\\
+    T & F & T & F & T\\
+    T & T & T & T & F\\
+    \end{array}
+    \end{displaymath}
+
+If we look very closely to our final value, we have essentially proved the XOR operator! (This'll come in handy when logical equivalence becomes more prevalent.)

@@ -1,0 +1,95 @@
+\contentsline {section}{\numberline {1}Tuesday, August 29, 2023}{5}{section.1}%
+\contentsline {subsection}{DISCLAIMER}{5}{section*.1}%
+\contentsline {subsection}{Statements and Logic}{5}{section*.1}%
+\contentsline {subsection}{Logical Negation, Disjunction, Conjunction, XOR, and Precedence}{5}{example.1.2}%
+\contentsline {subsubsection}{Negation (Not)}{5}{section*.2}%
+\contentsline {subsubsection}{Disjunction (Or)}{5}{section*.2}%
+\contentsline {subsubsection}{Conjunction (And)}{6}{section*.2}%
+\contentsline {subsubsection}{XOR $(\oplus )$}{6}{section*.2}%
+\contentsline {subsubsection}{Precedence}{6}{section*.2}%
+\contentsline {subsubsection}{Interpretations and Translating Statements}{6}{section*.2}%
+\contentsline {subsection}{Truth Tables}{6}{example.1.4}%
+\contentsline {section}{\numberline {2}Thursday, August 31, 2023}{8}{section.2}%
+\contentsline {subsection}{Logical Equivalence}{8}{section*.3}%
+\contentsline {subsection}{DeMorgan's Laws}{8}{example.2.1}%
+\contentsline {subsection}{Tautologies and Contradictions}{8}{example.2.1}%
+\contentsline {subsection}{Condensing and Proving Logical Equivalencies}{9}{example.2.3}%
+\contentsline {subsection}{Conditional Statements}{9}{example.2.4}%
+\contentsline {section}{\numberline {3}Tuesday, September 5, 2023}{11}{section.3}%
+\contentsline {subsection}{More on Conditional Statements}{11}{section*.4}%
+\contentsline {subsubsection}{Converse}{11}{section*.4}%
+\contentsline {subsubsection}{Contrapositive}{11}{section*.4}%
+\contentsline {subsubsection}{Inverse}{11}{section*.4}%
+\contentsline {subsection}{Biconditionals}{11}{section*.4}%
+\contentsline {subsubsection}{Necessary and Sufficient Conditions}{12}{section*.5}%
+\contentsline {subsection}{Arguments and Rules of Inference}{12}{section*.5}%
+\contentsline {section}{\numberline {4}Thursday, September 7, 2023}{14}{section.4}%
+\contentsline {subsection}{Number Bases}{14}{section*.6}%
+\contentsline {subsubsection}{Decimal (Base 10)}{14}{section*.6}%
+\contentsline {subsubsection}{Binary (Base 2)}{14}{section*.6}%
+\contentsline {subsection}{Converting from Binary to Decimal, and Decimal to Binary}{14}{section*.6}%
+\contentsline {subsection}{Digital Circuits}{14}{section*.6}%
+\contentsline {section}{\numberline {5}Tuesday, September 12, 2023}{15}{section.5}%
+\contentsline {subsection}{Propositional Logic: Are we being limited?}{15}{section*.7}%
+\contentsline {subsection}{Predicates}{15}{section*.7}%
+\contentsline {subsection}{Predicates with Logical Connectives}{15}{example.5.2}%
+\contentsline {subsection}{Quantifiers}{16}{example.5.3}%
+\contentsline {subsubsection}{The Universal Quantifier}{16}{section*.8}%
+\contentsline {subsubsection}{The Existential Quantifier}{16}{example.5.5}%
+\contentsline {subsection}{Negations of Quantifiers}{16}{example.5.6}%
+\contentsline {subsection}{An Intro to Nested Quantifiers}{17}{example.5.7}%
+\contentsline {section}{\numberline {6}Thursday, September 14, 2023}{18}{section.6}%
+\contentsline {subsection}{More on Predicate Logic: Truth and Falsity}{18}{section*.9}%
+\contentsline {subsection}{Vacuity in Universal Statements}{18}{example.6.1}%
+\contentsline {subsection}{Order Matters}{19}{example.6.2}%
+\contentsline {subsection}{Negating Nested Quantifiers}{19}{example.6.3}%
+\contentsline {section}{\numberline {7}Tuesday, September 19, 2023}{20}{section.7}%
+\contentsline {subsection}{Extending our Rules of Inference}{20}{section*.10}%
+\contentsline {subsubsection}{Universal Instantiation}{20}{section*.10}%
+\contentsline {subsubsection}{Universal Generalization}{20}{example.7.1}%
+\contentsline {subsubsection}{Existential Instantiation}{20}{example.7.2}%
+\contentsline {subsubsection}{Existential Generalization}{21}{example.7.2}%
+\contentsline {subsection}{Proofs}{21}{example.7.2}%
+\contentsline {subsection}{Statement of Theorems}{22}{example.7.2}%
+\contentsline {subsection}{Definition of Numbers}{22}{example.7.2}%
+\contentsline {subsubsection}{Extra Closure of Definitions}{22}{section*.11}%
+\contentsline {subsection}{Direct Proofs}{22}{section*.11}%
+\contentsline {subsection}{Proof by Contrapositive}{24}{example.7.5}%
+\contentsline {section}{\numberline {8}Thursday, September 21, 2023}{25}{section.8}%
+\contentsline {subsection}{Proof by Contradiction}{25}{section*.12}%
+\contentsline {subsection}{Proofs of Equivalence}{25}{example.8.1}%
+\contentsline {section}{\numberline {9}Tuesday, September 26, 2023}{26}{section.9}%
+\contentsline {subsection}{Exhaustive Proofs}{26}{section*.13}%
+\contentsline {subsection}{Proof by Cases}{26}{example.9.2}%
+\contentsline {subsection}{Constructive Proofs of Existence}{27}{example.9.4}%
+\contentsline {section}{\numberline {10}Thursday, September 28, 2023}{28}{section.10}%
+\contentsline {subsection}{Exam Review Day}{28}{section*.14}%
+\contentsline {section}{\numberline {11}Tuesday, October 3, 2023}{30}{section.11}%
+\contentsline {section}{\numberline {12}Thursday, October 5, 2023}{31}{section.12}%
+\contentsline {subsection}{Proofs Involving Universal Generalization}{31}{section*.15}%
+\contentsline {subsubsection}{Using Universal Generalization as a Method of Proof}{31}{example.12.2}%
+\contentsline {subsection}{Divisibility}{32}{example.12.5}%
+\contentsline {subsection}{Fundamental Theorem of Arithmetic}{33}{example.12.7}%
+\contentsline {section}{\numberline {13}Tuesday, October 10, 2023}{34}{section.13}%
+\contentsline {subsection}{Modular Arithmetic}{34}{section*.16}%
+\contentsline {subsection}{The Congruence Theorem}{34}{example.13.2}%
+\contentsline {subsection}{Quotient Remainder Theorem}{35}{example.13.5}%
+\contentsline {subsection}{Floors and Ceilings}{36}{example.13.10}%
+\contentsline {subsubsection}{Floors}{36}{section*.17}%
+\contentsline {subsubsection}{Ceilings}{36}{section*.17}%
+\contentsline {subsubsection}{Proofs Involving Floors and Ceilings}{37}{section*.17}%
+\contentsline {section}{\numberline {14}Thursday, October 12, 2023}{38}{section.14}%
+\contentsline {subsection}{Sequences, Summations, and Products}{38}{section*.18}%
+\contentsline {subsection}{Variable Ending Points}{38}{example.14.1}%
+\contentsline {subsection}{Nested Sums and Products}{38}{example.14.2}%
+\contentsline {subsection}{Telescoping Series}{39}{example.14.2}%
+\contentsline {subsection}{Merging and Splitting Summations}{39}{example.14.2}%
+\contentsline {subsubsection}{Splitting and Merging of Summations}{39}{section*.19}%
+\contentsline {subsubsection}{Splitting and Merging of Products}{39}{section*.19}%
+\contentsline {subsection}{Distribution}{39}{section*.19}%
+\contentsline {subsection}{Change of Variable}{40}{section*.19}%
+\contentsline {subsection}{Factorial}{40}{example.14.3}%
+\contentsline {subsubsection}{Properties of Factorial}{40}{section*.20}%
+\contentsline {section}{\numberline {15}Tuesday, October 17, 2023}{41}{section.15}%
+\contentsline {subsection}{Proof by Induction}{41}{section*.21}%
+\contentsline {subsubsection}{Simple Induction}{41}{section*.21}%

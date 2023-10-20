@@ -1,0 +1,105 @@
+\section{Thursday, October 12, 2023}
+
+\subsection{Sequences, Summations, and Products}
+\begin{example}
+    Write an explicit formula for the following sequence: $1, \frac{-1}{4}, \frac{1}{9}, \frac{-1}{16}, \frac{1}{25}, .....$
+\end{example}
+
+\textbf{Answer:}  \{$-(\frac{1^{n+1}}{-n^2})$\}$_{n=\infty}$
+
+\textbf{\underline{Definition 14.1}}: The \vocab{summation} of a term is the sum of the specified items, portrayed in the (example) form:
+
+\begin{displaymath}
+    \sum_{k=1}^{n}a^k=a^k+a^{k+1}+a^{k+2}+....+a^{k+n}
+\end{displaymath}
+
+This summation is very generic. Of course, as seen in our calculus courses, we can have different arguments inside of our summation that can make things a whole lot more interesting.
+
+\textbf{\underline{Definition 14.2}}: The \vocab{product} of a term is the product of the specified terms, portrayed in the (example) form:
+
+\begin{displaymath}
+    \prod_{k=1}^{n}ak=a(1)*a(2)*...*a(n)
+\end{displaymath}
+
+Once again, this product is very generic. We can include a multitude of arguments inside of our product to make things more interesting (again).
+
+\subsection{Variable Ending Points}
+For a summation, where we see n, this is the index of our final term. 
+
+\begin{example}
+    Evaluate $\sum_{k=0}^{n}\frac{k+1}{n+k}$ for when $n = 2$, $n=3$.
+\end{example}
+
+Then we can expand to show that the summation is equal to $(1/n)+(2/(n+1))+(3/(n+2)+....+((n+1)/2n)$.
+
+When we have that $n = 2$, we will have 3 terms. This is then equal to $1/2+2/3+3/4$.
+
+
+\subsection{Nested Sums and Products}
+For sums and products, we can next them to give different variations. (You must see if they will still give the same answer, or different answers.)
+
+\begin{displaymath}
+    \sum_{j=1}^{n}\sum_{i=1}^{m_j}Y_{ij}^2 \longrightarrow \sum_{j=1}^{n}(\sum_{i=1}^{m_j}Y_{ij})^2 \longrightarrow (\sum_{j=1}^{n}\sum_{i=1}^{m_j}Y_{ij})^2
+\end{displaymath}
+
+\subsection{Telescoping Series}
+For a series to be telescoping, we see the entirety of the sum/product, and the first and last operation should be the result, as everything in the middle will cancel.
+
+\begin{displaymath}
+    \sum_{k=1}^{n}(\frac{k}{k+1}-\frac{k+1}{k+2})
+\end{displaymath}
+\begin{displaymath}
+    \prod_{i=1}^{n}(\frac{i}{i+1})
+\end{displaymath}
+
+\subsection{Merging and Splitting Summations}
+Note that how in our calculus classes, when we had limits or integrals that seemed pretty long, we could split them up to make them a bit easier to understand. On the other hand, we could also merge two of them together to make them more cohesive. For summations and products, we can do the same thing.
+
+\subsubsection{Splitting and Merging of Summations}
+\begin{displaymath}
+    \sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)
+\end{displaymath}
+\begin{displaymath}
+    \sum_{k=m}^{n}a_k=\sum_{k=m}^{i}a_k+\sum_{k=i+1}^{n}a_k
+\end{displaymath}
+
+\subsubsection{Splitting and Merging of Products}
+\begin{displaymath}
+    \prod_{k=m}^{n}a_k*\prod_{k=m}^{n}b_k=\prod_{k=m}^{n}(a_k+b_k)
+\end{displaymath}
+\begin{displaymath}
+    \prod_{k=m}^{n}a_k=\prod_{k=m}^{i}a_k*\prod_{k=i+1}^{n}a_k
+\end{displaymath}
+
+\subsection{Distribution}
+Suppose we have some summation, which is to be multiplied by some constant c. Therefore, we can show this as:
+
+\begin{displaymath}
+    c * \sum_{k=m}^{n}a_k=\sum_{k=m}^{n}(c*a_k)
+\end{displaymath}
+
+\newpage
+
+\subsection{Change of Variable}
+
+\begin{example}
+    $\sum_{k=0}^{6}\frac{1}{k+1}$
+\end{example}
+
+\subsection{Factorial}
+\textbf{\underline{Definition 14.3}}: Suppose we have some number n. Therefore the factorial of that number is expressed as:
+
+\begin{displaymath}
+    n!=n*(n-1)*(n-2)*....*2*1
+\end{displaymath}
+
+\subsubsection{Properties of Factorial}
+Two very general properties of factorials that you should always remember are:
+\begin{itemize}
+    \item $0!=1$
+    \item $n!=n*(n-1)!$
+\end{itemize}
+
+
+
+

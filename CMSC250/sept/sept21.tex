@@ -1,0 +1,28 @@
+\section{Thursday, September 21, 2023}
+\subsection{Proof by Contradiction}
+
+\textbf{\underline{Definition 8.1}}: In proofs by contradiction, we assume the negation of the conclusion. We then use the premises of the theorem and the negation of the conclusion to arrive at a contradiction. The reason such proofs are valid rests on the logical equivalence of $p \rightarrow q$ and $\neg(p\land \neg q)$.
+
+Lets look at some examples for proof by contradiction.
+
+\begin{example}
+    \textbf{Theorem: $\sqrt{2}$ is irrational.}
+\end{example}
+
+\begin{proof}
+Assumption: $\sqrt{2}$ is a rational number. By definition, $\sqrt{2}=p/q$ such that $p,q \in \mathbb{Z}$ and $q \neq 0$. Also, assume p and q do not have a common factor. Squaring both sides gives $2= (p^2/q^2)$, $p^2=2q^2=2r$ such that $r\in \mathbb{Z}$. Since integers are closed in multiplication, $p^2$ is an even number by definition, then p is also an even number by $p=2m$ such that $m\in \mathbb{Z}$. Squaring p on both sides $p^2=4m^2=2q^2$, $\therefore q^2=2m^2=2s$ such that $s\in \mathbb{Z}$, $s=m^2$ since integers are closed under multiplication, $q^2$ is also even by definition, $\therefore q$ is even. Now we know p is even and so is q. Since p and q are both divisible by 2, this violates our assumptions. $\therefore \sqrt{2}$ is an irrational number. QED.
+\end{proof}
+
+\subsection{Proofs of Equivalence}
+
+\textbf{\underline{Definition 8.2}}: To prove a theorem that is a biconditional statement, that is, a statement of the form $p\iff q$, we show that $p \rightarrow q$ and $q \rightarrow p$ are both true. The validity of this approach is based on the tautology $(p \iff q) \equiv (p \rightarrow q) \land (q \rightarrow p)$
+
+Let's look at an example of proof of equivalence.
+
+\begin{example}
+    \textbf{Theorem: \(n\) is odd if and only if $n^2$ is odd.}
+\end{example}
+
+\begin{proof}
+Since n is an odd number, by definition of odd numbers $n=2k+1$ such that $k \in \mathbb{Z}$. Therefore by squaring both sides, $n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1$. Suppose now we have $m=2k^2+2k$, where $m \in \mathbb{Z}$. Since integers are closed under multiplication and addition, $n^2=2m+1$. Thus $n^2$ is odd, by definition. QED.
+\end{proof}

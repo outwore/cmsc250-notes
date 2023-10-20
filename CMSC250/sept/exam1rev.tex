@@ -1,0 +1,70 @@
+\section{Thursday, September 28, 2023}
+\subsection{Exam Review Day}
+Today is an exam review day. A practice midterm can be found here for exam practice. \\
+
+https://umd.instructure.com/courses/1349902/files/folder/PracticeExams?preview=74840604.
+
+Extension of the lecture examples, here are some proofs.
+
+\begin{example}
+    \textbf{Theorem: If $x \leq y$ then $\sqrt{x} \leq \sqrt{y}$}
+\end{example}
+
+\begin{proof}
+    Let $x \leq y$. Subtracting both sides by y, we then have $x-y \leq 0$. Thus, squaring x and y we must take the root of it therefore showing $(\sqrt{x})^2-(\sqrt{y})^2 \leq 0$,  then foil it out to then we can divide both sides to then get $\sqrt{x}-\sqrt{y} \leq 0$, then add $\sqrt{y}$ to both sides to then show that $\sqrt{x} \leq \sqrt{y}$. QED.
+\end{proof}
+
+\begin{example}
+\textbf{Theorem: If $n \in \mathbb{N},$ then $1+(-1)^n(2n-1)$ is a multiple of 4.}
+\end{example}
+
+\begin{proof}
+Proof by Cases\\
+\textbf{Case 1:} Suppose that $n=0$. Therefore, $1+(-1)^0(2*0-1)=1+1(0-1)=0$ showing that 0 is divisible by 4.\\
+\textbf{Case 2:} Suppose that n is even. Therefore by definition of even numbers, $n=2k$ such that $k\in \mathbb{Z}$. So then we have $1+(-1)^2^k(2n-1), (-1)^2^k$ is always 1, so then doing extra math we can show that $1+4k-1=4k$ such that $k \in \mathbb{Z}$, $4k$ is a multiple of 4.\\
+\textbf{Case 3:} Suppose that n is an odd number. Therefore by definition of odd numbers, $n=2k+1$, such that $k \in \mathbb{Z}$.
+\end{proof}
+
+\begin{example}
+\textbf{Theorem: If $a \in \mathbb{Z}^+,$ and $\sqrt[n]{a} \in \mathbb{Q}$, then $\sqrt[n]{a} \in \mathbb{Z}^+$.}
+\end{example}
+
+\begin{proof}
+    Suppose $\sqrt[n]{a} = p/q$, where $p,q \in \mathbb{Z}$, by the definition of rational numbers. By taking the nth power on both sides, we then get $a=p^n/q^n$ on both sides. Assume that p and q are both co-prime, therefore $q=1$. Since $q=1, q^n=1$. Thus, $a = p^n$. Now, taking the nth root on both sides, we then have $\sqrt[n]{a}=p$, meaning that since we have already assumed that p is a co-prime integer, then $\sqrt[n]{a} \in \mathbb{Z}^+$. Therefore, $\sqrt[n]{a} \in \mathbb{Z}^+$. QED.
+\end{proof}
+
+\newpage
+
+\begin{example}
+\textbf{Theorem: For all $n \in \mathbb{Z} \geq 0$, if $(n+1)^2$ is $\in \mathbb{Z}$ odd, then n is $\in \mathbb{Z}$ even.}
+\end{example}
+
+\begin{proof}
+    Proof by Contrapositive\\
+    Through the proof by contrapositive, we will the prove that if $n \notin \mathbb{Z}$ which are even, then $(n+1)^2 \notin \mathbb{Z}$ that are odd.\\
+    Suppose n is not even. Then n is odd which then constitutes that $n=2k+1$ for some $k \in \mathbb{Z}$ by the definition of odd numbers. Then, $(n+1)^2=(2k+1+1)^2=4k^2+8k+4=2(2k+4k+2)$. Set m to be $2k+4k+2$. Therefore, $(n+1)^2=2m$ as $m \in \mathbb{Z}$ due to integers being closed under addition and multiplication. Since $n+1=^2$ is equal to an even number by definition of even numbers, the contrapositive is shown to be true, therefore for all $n \in \mathbb{Z} \geq 0$, if $(n+1)^2$ is $\in \mathbb{Z}$ odd, then n is $\in \mathbb{Z}$ even. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: The product of any two even integers is a multiple of 4.}
+\end{example}
+
+\begin{proof}
+    Suppose we have even integers a and b. By the definition of even numbers, $a = 2m, b = 2n$, where $m, n \in \mathbb{Z}$. Therefore the product of two integers a and b is $a * b = 2m * 2n = 4(mn)$. Suppose we have $j = mn$, such that $j \in \mathbb{Z}$. Therefore, the product of a and b now becomes $a * b = 2m * 2n = 4(mn) = 4j$, which then proves that the product of two even integers is truly a multiple of 4. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: For all $x \in \mathbb{R},$ if $x \geq 10$ then $x^2-5x+6 \geq 44$.}
+\end{example}
+
+\begin{proof}
+    Suppose that we have $x \geq 10$ from the given theorem. Thus, subtracting by 5 on both sides then gives that $x-5 \geq 10-5$, which also states that then $x(x-5)\geq 10(10-5).$ Therefore, we have that $x^2-5x\geq 50$, which implies that $x^2-5x+6 \geq 56$. Since $56 \geq  44$, the original theorem is correct due to transitivity. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: The sum of any 3 consecutive integers is divisible by 3.}
+\end{example}
+
+\begin{proof}
+    Suppose our 3 consecutive integers are $x, x+1, x+2$, where $x \in \mathbb{Z}$. Therefore, the sum of these 3 consecutive integers would be shown by $(x)+(x+1)+(x+2)=3x+3$. Through this, we may also show that $3x+3=3(x+1)$. Suppose we have now that $m=x+1$, such that $m \in \mathbb{Z}$. Since integers are closed in multiplication and addition, we now have that $3x+3=3m$, proving that our 3 consecutive integers are truly divisible by 3. QED.
+\end{proof}

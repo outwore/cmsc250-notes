@@ -1,0 +1,167 @@
+\section{Tuesday, September 19, 2023}
+\subsection{Extending our Rules of Inference}
+\subsubsection{Universal Instantiation}
+\textbf{\underline{Definition 7.1:}} We conclude that $P(c)$ is true, where \(c\) is a particular member of the domain, given the premise $\forall xP(x)$.
+
+\begin{example}
+Given Marvin $\in$ Martians:\\
+All Martians are green\\
+$\therefore$ Marvin is green.
+\end{example}
+
+To show this in formal logic proof, we can show universal instantiation to be shown like:
+
+\begin{center}
+    $\forall x \in D[P(x)]$\\
+    $\therefore P(c)$, for any $c\in D$.
+\end{center}
+
+\subsubsection{Universal Generalization}
+\textbf{\underline{Definition 7.2:}} We conclude that $\forall xP(x)$ is true, given the premise that $P(c)$ is true for all elements \(c\) in the domain. The element \(c\) must be an arbitrary, and not a specific element of the domain.
+
+\begin{example}
+    $P(c): c \geq 0$\\
+    $c \in \mathbb{N}[P(c)]$\\
+    $\therefore \forall x \in \mathbb{N}[P(x)]$
+\end{example}
+
+To show this in formal logic proof, we can show universal generalization to be shown like:
+
+\begin{center}
+    $P(c)$, for some $c \in D$ (selected arbitrarily)\\
+    $\therefore \forall x \in D[P(x)]$
+\end{center}
+
+\subsubsection{Existential Instantiation}
+\textbf{\underline{Definition 7.3:}} Suppose we know that $\exists x: P(x)$ is true. We can then conclude that there is an element c in the domain for which $P(c)$ is true.
+
+To show this in formal logic proof, we can show existential instantiation to be shown like:
+
+\begin{center}
+    $\exists x \in D[P(x)]$\\
+    $\therefore P(c)$ for some element $c \in D$
+\end{center}
+
+\subsubsection{Existential Generalization}
+\textbf{\underline{Definition 7.4:}} Suppose that for a particular element c, if we know $P(c)$ is true, we can conclude that $\exists x P(x)$ is true.
+
+To show this in formal logic proof, we can show existential generalization to be shown like:
+
+\begin{center}
+    $P(c)$ for some $c \in D$\\
+    $\therefore \exists x \in D[P(x)]$
+\end{center}
+
+\subsection{Proofs}
+Proofs are the deductive arguments for a mathematical statement, which shows the stated assumptuons which logically guarantee the conclusion. In common proof, they are made up of multiple different parts which in the end, add up to be all one body.
+
+With proof, we have different terminologies.
+
+\begin{itemize}
+    \item A \vocab{theorem} is a statement that can be shown to be true.
+    \item A \vocab{lemma} is a less important theorem that is helpful in the proof of other results.
+    \item A \vocab{corollary} is a theorem that can be established directly from a theorem that has been proved.
+    \item A \vocab{conjecture} is a statement that is being proposed to be a true statement.
+    \item A \vocab{proof} is a valid argument that establishes the truth of a theorem.
+    \item An \vocab{axiom} is a statement we assume to be true.
+\end{itemize}
+
+A good proof usually has:
+
+\begin{itemize}
+    \item A clear statement of what is to be proved (labelled as theorem, lemma, proposition, or corollary).
+    \item The word "Proof" to indicate where the proof starts.
+    \item A clear indication of flow.
+    \item A clear justification for each step.
+    \item A clear indication of the conclusion.
+    \item The abbreviation "QED" or $\blacksquare$ to indicate the end of the proof.
+\end{itemize}
+
+There are different kinds of proof methods that we may use to prove some statement, and depending on the question you are doing one proof method may be easier than the other (or might one not be feasible!) The different types of proof methods we use are
+
+\begin{itemize}
+    \item Direct proof
+    \item Proof by contraposition
+    \item Proof by contradiction
+    \item Exhaustive proof
+    \item Proof by cases.
+\end{itemize}
+
+\subsection{Statement of Theorems}
+Know that for all of these, everything is equivalent (you can use these in your proofs!)
+
+\begin{itemize}
+    \item The sum of two positive integers is positive.
+    \item If m, n are positive integers then their sum m + n is a positive integer.
+    \item For all positive integers m, n their sum m + n is a positive integer.
+    \item $(\forall m,n \in \mathbb{Z}) : [((m > 0)\land (n > 0)) \rightarrow ((m+n)>0)]$
+\end{itemize}
+
+\subsection{Definition of Numbers}
+All numbers used in proof will have their own definitions in order to make our proofs a lot easier instead of having to rigorously prove why it is.
+
+\textbf{\underline{Definition 7.3}}: An integer n is even if $n=2k$ or some integer k, and is odd if $n=2k+1$ for some integer k.
+
+\textbf{\underline{Definition 7.4}}: A number q is rational if there exists integers a, b with $b \neq 0$ such that $q = a/b$.
+
+\textbf{\underline{Definition 7.5}}: A real number that is not rational is irrational.
+
+\subsubsection{Extra Closure of Definitions}
+\begin{itemize}
+    \item $\mathbb{Z}$ is closed under addition (If $a,b \in \mathbb{Z}$, then $a+b \in \mathbb{Z}$).
+    \item $\mathbb{Q}^\neq^0$ is closed under division.
+    \item $\mathbb{Z}^\neq^0$ is not closed under division.
+\end{itemize}
+
+Understand that closure practically means that if we add, subtract, multiply, or divide by two of the same type of number (i.e. $a,b \in \mathbb{Z} \rightarrow a+b \in \mathbb{Z}$), it will come out as that same type. Understand that for cases where we are trying to divide, some types of numbers that include 0 are not closed under division (i.e. $\mathbb{R}$, since reals contain 0 in their domain, and if $a,b \in \mathbb{R}$, there is a possibility that $a/b$ will be undefined.)
+
+\subsection{Direct Proofs}
+Let's go over some examples of direct proofs.
+
+\begin{example}
+    \textbf{Theorem: The square of an even number is even.}
+\end{example}
+
+\begin{proof}
+Let $x = 2k$, where $k \in \mathbb{Z}$ by the definition of even numbers. Squaring both sides will give us $x^2=4k^2=2(2k^2)$. Let $m=2k^2$, where $m\in \mathbb{Z}$. $\therefore x^2=2m$, and by the definition of even numbers $x^2$ is even. QED.
+\end{proof}
+
+\newpage
+
+\begin{example}
+    \textbf{Theorem: The product of two odd numbers is odd.}
+\end{example}
+
+\begin{proof}
+Let $x=2k+1$ and $y=2m+1$, where $k,m \in \mathbb{Z}$ by the definition of odd numbers. $x*y=(2k+1)(2m+1)=4km+2k+2m+1=2(2km+k+m)+1$. Let $2km+k+m=p$, where $p\in \mathbb{Z}$. Since integers are closed in multiplication and addition, $x*y=2p+1$. $\therefore x*y$ is an odd number by the definition of odd numbers. QED.
+\end{proof}
+
+\begin{example}
+    \textbf{Theorem: The sum of two rational numbers is rational.}
+\end{example}
+
+\begin{proof}
+    Let $p=a/b$, where $p \in \mathbb{Q}, a,b \in \mathbb{Z}, b \neq 0$. Also, let $q=c/d$, where $q \in \mathbb{Q}, c,d \in \mathbb{Z}, d \neq 0$, both by the definition of rational numbers. The sum of p and q is such then $p+q=(a/b)+(c/d)=(ad+bc)/bd$. Suppose $ad+bc=s$ such that $s \in \mathbb{Z}$, and $bd=r$ such that $r \in \mathbb{Z}$ since integers are closed under addition and multiplication. Thus, $p+q=s/r$ where $r\neq 0$ since it is a product of two non-zero numbers. $\therefore p+q$ is a rational number. QED. 
+\end{proof}
+
+\newpage
+
+\subsection{Proof by Contrapositive}
+Let's go over an example of proof by contrapositive.
+
+\begin{example}
+    \textbf{Theorem: If $3n+2$ is odd, where n is an integer, then n is odd.}
+\end{example}
+
+Before we jump into the proof, let's establish some predicates.
+
+\begin{center}
+$n \in \mathbb{Z}$\\
+$P(n): 3n+2$ is odd\\
+$Q(n): n$ is odd\\
+Prove $\forall n : P(n) \rightarrow Q(n)$
+\end{center}
+
+\begin{proof}
+$\neg Q(n) \rightarrow \neg P(n)$ if n is even, then $3n+2$ is even. Let $n=2k$ by the definition of even numbers, where $k\in \mathbb{Z}$. Multiplying both sides by 3, $3n=2(3k)$ by commutativity. Adding 2 to both sides, $3n+2=2(3k)+2=2[3k+1]=2r$ where $r\in \mathbb{Z}$. $r=3k+1$, since integers are closed under multiplication and addition. $3n+2=2r$, $\therefore 3n+2$ is even by the definition of even numbers. Thus, if n is even then $3n+2$ is even. $\neg Q(n) \rightarrow \neg P(n)$ is logically equivalent to $P(n) \rightarrow Q(n)$, $\therefore$ if $3n+2$ is odd then $n$ is odd. QED.
+\end{proof}
