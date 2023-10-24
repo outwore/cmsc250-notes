@@ -93,3 +93,7 @@
 \contentsline {section}{\numberline {15}Tuesday, October 17, 2023}{41}{section.15}%
 \contentsline {subsection}{Proof by Induction}{41}{section*.21}%
 \contentsline {subsubsection}{Simple Induction}{41}{section*.21}%
+\contentsline {section}{\numberline {16}Thursday, October 19, 2023}{43}{section.16}%
+\contentsline {section}{\numberline {17}Tuesday, October 24, 2023}{44}{section.17}%
+\contentsline {subsection}{Recurrence Relations}{44}{section*.22}%
+\contentsline {subsection}{Constructive Induction}{45}{example.17.4}%

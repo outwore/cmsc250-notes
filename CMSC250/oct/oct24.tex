@@ -1,0 +1,84 @@
+\section{Tuesday, October 24, 2023}
+Today's lecture will be a continuation on induction, going into more thorough induction styles.
+
+\subsection{Recurrence Relations}
+Recurrence relations are equations that define sequences based on a rule that gives the next term as a function of the previous term. A really simple form of a recurrence relation is the case where the next term depends only on the immediately previous term.
+
+As a very simple example, suppose we have that $T(n)=T(n-1)+2n$. Therefore, $T(0)=0$. If we keep breaking this up into more parts, we can have:
+
+\begin{itemize}
+	\item Suppose at the we are taking the first 'k' step. Therefore $T(n)=T(n-1)+2n.$
+	\item Suppose are at the second 'k' step. Therefore $T(n)=T(n-2)+2n-1+2n$.
+	\item At the kth step, we can then derive a final formula for $T(n)$.
+\end{itemize}
+
+Let's look at an example where we see our favorite friend, the summation.
+
+\begin{example}
+	Suppose $a_0=1$.\\
+	For $n \geq 1: a_n=[\sum_{i=0}^{n-1}a_i]+1$.\\
+	\textbf{Theorem:} $(\forall n \geq 0)[a_n=2^n]$
+\end{example}
+
+\begin{proof}
+	Strong Induction on n\\
+	\textbf{Base Case}: Suppose that $a_0=1$. Therefore $a_0=2^0=1$. Therefore it holds true for the base case.\\
+	\textbf{Inductive Hypothesis}: Assume that it holds for all values $0\leq i \leq n-1$. Therefore $a_{n-1}=2^{n-1},$ continuing then that $a_0=2^0$.\\
+	\textbf{Inductive Step:} Now we must show that $a_n=2^n$. Therefore by the recurrence equation $a_n=[\sum_{i=0}^{n-1}a_i]+1$. Then we also know that $a_i=2^i$ from the inductive hypothesis. Then we can replace the summation inside with $a_n=[\sum_{i=0}^{n-1}2^i+1$. The summation is then equal to $(2^n-1)/(2-1)+1=2^n-1+1=2^n$. QED.
+\end{proof}
+
+\begin{example}
+	Assume the following definition of a recurrence relation:
+	\begin{center}
+		$a_0=0$\\
+		$a_1=7$\\
+		$(\forall i \geq 2)[a_i=2a_{i-1}+3a_{i-2}]$
+	\end{center}
+	\textbf{Theorem:} All elements in this relation have this property: $(\forall n \in \mathbb{N})[a_n\equiv 0 \mod 7]$
+\end{example}
+
+\begin{proof}
+	Strong Induction\\
+	\textbf{Base Case}:Suppose n = 0. Therefore $a_0=0$ given. Therefore $a_0=0\equiv 0 \mod 7$. For n=1, $a_1=7$. Therefore $a_1=7\equiv 0 \mod 7$. Therefore the claim holds for the base case.\\
+	\textbf{Inductive Hypothesis}: Assume it holds for all values $0 \leq i \leq n-1$. Then $a_{n-1}\equiv 0 \mod 7$, continuing on, therefore $0\equiv 0 \mod 7$\\
+	\textbf{Inductive Step:} Now we must show that $a_n \equiv 0 \mod 7$. We know that $a_n=2a_{n-1}+3a_{n-2}$ from the recurrence equation. Then, $a_{n-1} \equiv 0 \mod 7, \therefore 7|a_{n-1}$. Also, we know that $a_{n-2}\equiv 0 \mod 7, \therefore 7|a_{n-2}$. Thus, we then can take the recurrence equation $a_n=2a_{n-1}+3a_{n-2}=2(7k)+3(7b), k,b \in \mathbb{Z}, \therefore =7(2k+3b)$. Thus, $7|a_n$, proving that $a_n\equiv 0 \mod 7$. QED.
+\end{proof}
+
+\begin{example}
+	\textbf{Theorem:} For all $n \geq 2$: n can be expressed as the product of primes. (Note that we consider a single prime factor to be a "product" of primes.)
+\end{example}
+
+This is a special example, because this is half of the Unique Prime Factorization Theorem. The other half is showing that the prime factorization is unique.
+	
+\begin{proof}
+	Strong Induction on n\\
+	\textbf{Base Case}: n=2. Since 2 is prime, it holds true for the base case.\\
+	\textbf{Inductive Hypothesis}: Assume it holds true for all values $2 \leq i \leq n-1$. \\
+	\textbf{Inductive Step:} Now we must show that n is a product of prime numbers. There are two cases, which are if n is a prime number, and if n is composite. We know that if n is a prime number, it is a product of primes. However, if n is composite: $n=ab$, such that $2 \leq a \leq n-1, 2 \leq b \leq n-1$. Therefore we also then know that a and b are both products of prime numbers, from our inductive hypothesis. $a=p_1p_2....p_i, b=q_1q_2....q_i$. Therefore n is a product of primes. QED.
+\end{proof}
+
+\begin{example}
+	\textbf{Chocolate Bar Division}\\
+	Suppose you have a chocolate bar that is sectioned off into $n$ squares, arranged in a rectangle. You can break the bar into pieces along the lines separating the squares. (Each break must go all the way across the current piece.)\\	\textbf{Theorem:} It will always take $n-1$ breaks to separate the bar into individual squares.
+\end{example}
+
+\begin{proof}
+	Induction on n\\
+	\textbf{Base Case}:\\
+	\textbf{Inductive Hypothesis}\\
+	\textbf{Inductive Step:}
+\end{proof}
+
+\subsection{Constructive Induction}
+
+\begin{example}
+	\textbf{Theorem:} For all $n \geq 1$, $\sum_{i=1}^n4i-2$.
+\end{example}
+
+\begin{proof}
+	Constructive Induction on n\\
+	\textbf{Base Case}:\\
+	\textbf{Inductive Hypothesis}:\\
+	\textbf{Inductive Step}:
+\end{proof}
+	
